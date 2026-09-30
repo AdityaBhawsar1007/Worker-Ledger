@@ -2,62 +2,72 @@
 
 ## Project Title
 
-Daily Wage Tracker and Worker Ledger
+**Daily Wage Tracker and Worker Ledger**
 
 ## Background and Motivation
 
-The idea for this project came from observing how my father manages workers in his contracting work. Many workers work under him, and each worker has a fixed daily wage. He records their attendance in a register and manually calculates their total earnings at the end of each work cycle.
+The thought of this project was inspired by witnessing my father's way of managing the workers under his contracting services. Most of the workers he hires are on a daily wage basis. He maintains a manual register of the workers and their daily attendance. He also calculates their total earnings at the end of each work cycle by considering their daily wage.
 
-Some workers take advance payments during the cycle. These amounts must also be recorded and deducted from their earnings to find the remaining amount payable. Keeping track of attendance, advances and final payments together can become time-consuming, especially when there are many workers.
+Some of them request advances and hence those payments are also recorded, to keep a track of the amount payable to them. Maintaining a record of each worker's attendance, along with the advances and final payments, makes the task tedious for my father, when there are a lot of workers involved.
 
-This real-life situation motivated me to develop a simple Python program that brings these details together and reduces repeated manual calculations.
+This inspired me to design a simple Python program, that would collect all the details pertaining to a worker into a single entity and help in eliminating repetitive calculations.
 
-## Problem to Be Solved
+## Problem to be Solved
 
-Managing daily-wage workers through a manual register requires the contractor to:
+Keeping track of daily-wage workers through a manual register necessitates that the contractor:
 
-- Maintain each worker's name and daily wage.
-- Record daily attendance accurately.
-- Calculate earnings from attendance, including any changes in the wage for a particular day.
-- Track advance payments and other payments made during the cycle.
-- Deduct payments from earnings to calculate the remaining balance.
-- Review all workers' totals at the end of the cycle.
+- Maintains the name and daily wage of each worker.
 
-Doing these tasks manually can lead to missed entries, calculation mistakes and difficulty checking how much is still payable to each worker.
+- Records the worker's attendance on a daily basis.
+
+- Calculates their total earnings for the cycle from the attendance with possible modifications to the daily wage in a day.
+
+- Records any advances and other payments made to the workers.
+
+- Calculates the balance due payments by subtracting the total payments from total wages.
+
+- Views the combined report of all the workers at the end of the cycle.
+
+All of these tasks require the contractor to perform a lot of repetitive calculations and recordings which may result in errors and make the task tedious.
 
 ## Proposed Solution
 
-The Daily Wage Tracker and Worker Ledger is a menu-driven Python application that manages worker details, attendance and payments during a program session. It calculates earnings and balances automatically and displays all workers together in a tabular ledger.
-
-The program uses the following calculation:
+The Daily Wage Tracker and Worker Ledger, is a menu driven Python application, that manages worker details, attendance, and payments made to them during a program session. The application calculates the total wages and balances due automatically and displays them collectively in a tabular column, for a better visual appeal as shown below.
 
 **Remaining Balance = Total Earned Wages - Total Payments**
 
-Advance payments are included in total payments. A positive balance shows the amount still payable, while a negative balance shows that the worker has received more than their recorded earnings.
+The above formula uses the total of all payments, including the advance payments that are recorded with the name of each worker.
+
+A positive balance indicates the money due to the worker, and a negative balance indicates the overpayment or payment beyond the wages.
 
 ## Main Features
 
-1. **Worker management:** Add workers with their names and normal daily wages, and view the worker list.
-2. **Attendance management:** Mark a worker Present or Absent for the current date, with an optional custom wage for a present worker.
-3. **Attendance register:** View all workers' attendance for a selected date range, along with present days, absent days and earned amounts.
-4. **Payment management:** Record payments with a date, amount and note, and view an individual worker's payment history.
-5. **Combined ledger:** Display all workers' attendance counts, earnings, payments and balances in one table, with overall financial totals.
-6. **New cycle:** Clear attendance and payments after confirmation while retaining worker names and normal wages during the current session.
+- **Worker management:** To add workers with their names and normal daily wages, and view the worker list.
+
+- **Attendance management:** To mark a worker Present or Absent for the current date, with an option to add a custom wage for a Present day.
+
+- **Attendance register:** To view attendance of all workers for a selected date range, with the number of present days, absent days and the amount earned for those present days.
+
+- **Payment management:** To record a payment with a given date, amount and a note, along with viewing an individual worker's payments.
+
+- **Combined ledger:** To display all workers attendance counts, amounts earned, payments, balances in combined table with overall amounts of all.
+
+- **New cycle:** To confirm new cycle which clears all attendance and payments, but keeping the names of the workers and their normal wages during current run of the program.
 
 ## Example
 
-If a worker earns Rs. 500 per day and is present for 10 days, their total earnings are Rs. 5,000. If they have already received Rs. 1,500 in advance, the remaining amount payable is:
+A worker whose normal daily wage is Rs. 500 and he was present for 10 days, the total amount earned would be Rs. 5000. If he had received Rs. 1500 in advance, the balance due to him is calculated as:
 
-**Rs. 5,000 - Rs. 1,500 = Rs. 3,500**
+**Rs. 5000 - Rs. 1,500 = Rs. 3,500**
 
-The program calculates this balance from the recorded attendance and payments.
+The application calculates the balance using the amount earned from attendance and total payments.
 
 ## Scope and Limitations
 
-This version is a single-user, console-based academic project built using Python functions, modules, lists, dictionaries and date handling. It does not use a database or save data to files. All records are lost when the program closes, so it demonstrates the workflow but does not yet fully replace a permanent register.
+The scope of this project is to develop a single-user, console based, academic application using Python functions, modules, lists, dictionaries and date handling. It does not involve the use of database or saving of records in files. All the records are temporary and the application is meant to display, but not implement, the actual register system.
 
-Starting a new cycle clears all attendance and payments, including any unpaid balance or advance. These amounts are not automatically carried forward. Worker details are retained only while the program remains running.
+The new cycle option clears all the attendance and payments, which also resets any advance or due amount, therefore those amounts cannot be carried forward.
 
 ## Expected Outcome
 
-The project aims to simplify attendance and wage calculations, reduce repeated manual work and provide a clear view of each worker's current balance. It applies introductory Python concepts to a practical problem observed in my father's work.
+The project targets to provide a simplified way of recording and calculating wages of workers and their current dues. This helps in avoiding the repeated manual calculations that require a lot of repetitive steps. It uses the basic Python concepts to solve a common real-world problem that I witness in my father's day to day business.
